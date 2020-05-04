@@ -19,4 +19,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('bookmarks/', include('bookmarks.urls')), # 마지막 쉼표에 주의
+    path('', include('blog.urls')),
 ]
