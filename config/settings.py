@@ -30,6 +30,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '+1qeq+cv)awtj-szbsgib5ee(aubl1
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
 ALLOWED_HOSTS = ['127.0.0.1', 'ian-django-blog.herokuapp.com']
+#ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
 
 # Application definition
@@ -86,6 +87,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -139,3 +141,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
