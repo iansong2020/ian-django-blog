@@ -15,13 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import include, url
+from django.conf.urls import include
 from django.contrib.auth import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('bookmarks/', include('bookmarks.urls')), # 마지막 쉼표에 주의
-    url(r'^accounts/login/$', views.auth_login, name='login'),
-    url(r'^accounts/logout/$', views.auth_logout, name='logout', kwargs={'next_page': '/'}),
+    path('login/', views.LoginView.as_view(), name="login"),
+    path('logout/', views.LogoutView.as_view(), name="logout", kwargs={'next_page': '/'}),
     path('', include('blog.urls')),
 ]
