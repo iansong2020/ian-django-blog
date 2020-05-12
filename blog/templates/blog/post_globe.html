@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <h1>Map globe</h1>
+    <br/>
+    <div class="panel panel-default">
+        <div class="panel-body">
+             <div id="getTag" style="border-width: 1px;border-style: solid;border-color: red;">{{iframe}}</div>
+        </div >
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            var setTag = "{{iframe}}"
+            $("#getTag").html(setTag);
+        });
+    </script>
+
+
+
+{% endblock %}

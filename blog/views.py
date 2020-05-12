@@ -1,8 +1,13 @@
+import io
+from django.http import FileResponse
+from reportlab.pdfgen import canvas
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .models import Post, Comment
 from .forms import PostForm, CommentForm
 from django.contrib.auth.decorators import login_required
+import folium
+from IPython.display import HTML
 
 # Create your views here.
 def post_list(request):
@@ -26,6 +31,33 @@ def post_new(request):
     else:
         form = PostForm()
     return render(request, 'blog/post_edit.html', {'form': form})
+
+
+def post_globe(request):
+
+    m = folium.Map()
+    #iframe = m._repr_html_()
+    #display(HTML(iframe))
+    iframe = m.get_root().render()
+
+    # m.save('plot_data.html')
+    # Import the Folium interactive html file
+
+    # HTML('<iframe src=plot_data.html width=700 height=450></iframe>')
+
+
+    return render(request, 'blog/post_globe.html', {'iframe': iframe})
+
+def post_pdf(request):
+    buffer = io.BytesIO()
+    p = canvas.Canvas(buffer)
+    p.drawString(100, 100, "Hello world !! ")
+    p.showPage()
+    p.save()
+
+    buffer.seek(0)
+
+    return FileResponse(buffer, as_attachment=True, filename='hello.pdf')
 
 @login_required
 def post_edit(request, pk):
