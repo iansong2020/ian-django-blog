@@ -1,0 +1,7 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% load static %}
+    <embed src="{% static 'pdf/django-zh-TW.pdf' %}" type="application/pdf" width="600" height="400" />
+
+{% endblock %}

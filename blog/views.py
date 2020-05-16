@@ -1,5 +1,5 @@
 import io
-from django.http import FileResponse
+from django.http import FileResponse, Http404
 from reportlab.pdfgen import canvas
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
@@ -48,7 +48,18 @@ def post_globe(request):
 
     return render(request, 'blog/post_globe.html', {'iframe': iframe})
 
+
 def post_pdf(request):
+    return render(request, 'blog/post_pdf.html')
+    try:
+        # response = FileResponse(open({% static 'pdf/django-zh-TW.pdf' %}, 'rb'), content_type='application/pdf')
+        response = FileResponse(open('pdf/django-zh-TW.pdf', 'rb'), content_type='application/pdf')
+        return render(request, 'blog/post_pdf.html', {'response': response})
+    except FileNotFoundError:
+        raise Http404('not found')
+
+
+def post_pdf_bak(request):
     buffer = io.BytesIO()
     p = canvas.Canvas(buffer)
     p.drawString(100, 100, "Hello world !! ")
