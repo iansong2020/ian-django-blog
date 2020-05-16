@@ -6,8 +6,6 @@ from django.utils import timezone
 from .models import Post, Comment
 from .forms import PostForm, CommentForm
 from django.contrib.auth.decorators import login_required
-import folium
-from IPython.display import HTML
 
 # Create your views here.
 def post_list(request):
@@ -34,30 +32,11 @@ def post_new(request):
 
 
 def post_globe(request):
-
-    m = folium.Map()
-    #iframe = m._repr_html_()
-    #display(HTML(iframe))
-    iframe = m.get_root().render()
-
-    # m.save('plot_data.html')
-    # Import the Folium interactive html file
-
-    # HTML('<iframe src=plot_data.html width=700 height=450></iframe>')
-
-
-    return render(request, 'blog/post_globe.html', {'iframe': iframe})
+    return render(request, 'blog/post_globe.html')
 
 
 def post_pdf(request):
     return render(request, 'blog/post_pdf.html')
-    try:
-        # response = FileResponse(open({% static 'pdf/django-zh-TW.pdf' %}, 'rb'), content_type='application/pdf')
-        response = FileResponse(open('pdf/django-zh-TW.pdf', 'rb'), content_type='application/pdf')
-        return render(request, 'blog/post_pdf.html', {'response': response})
-    except FileNotFoundError:
-        raise Http404('not found')
-
 
 def post_pdf_bak(request):
     buffer = io.BytesIO()
