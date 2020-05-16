@@ -48,3 +48,10 @@ h1, h2, h3, h4 {
 .comment {
     margin: 20px 0px 20px 20px;
 }
+
+.iframe100 {
+  display: block;
+  border: none;
+  height: 80vh;
+  width: 80vw;
+}
