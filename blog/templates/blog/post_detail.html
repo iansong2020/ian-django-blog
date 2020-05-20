@@ -1,6 +1,6 @@
-{% extends 'blog/base.html' %}
+{% extends 'blog/post_base.html' %}
 
-{% block content %}
+{% block post_base %}
     <div class="post">
 
         {% if post.published_date %}
@@ -42,4 +42,4 @@
 {% endfor %}
 
 
-{% endblock %}
+{% endblock post_base %}

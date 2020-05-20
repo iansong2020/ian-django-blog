@@ -1,7 +1,7 @@
-{% extends 'blog/base.html' %}
+{% extends 'blog/post_base.html' %}
 
-{% block content %}
-    <h1>Map globe</h1>
+{% block post_base %}
+    <h1>찾아오시는길</h1>
     <br/>
  	<div id="map" style="width:500px;height:400px;"></div>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=28bda2cc651c9b3b3daca4b718c93fba"></script>
@@ -17,4 +17,4 @@
 
 
 
-{% endblock %}
+{% endblock post_base %}

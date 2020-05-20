@@ -1,10 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
+
+<!DOCTYPE HTML>
+<!--
+	HeavyIndustry by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+{% load static %}
+<html>
+	<head>
+		<title>Real Estate Agent by IANSONG</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!--		<script src="{% static 'js/skel.min.js' %}"></script>
+		<script src="{% static 'js/skel-panels.min.js' %}"></script>
+		<script src="{% static 'js/init.js' %}"></script>
+		<noscript>-->
+<!--			<link rel="stylesheet" href="{% static 'css/skel-noscript.css' %}" />-->
+			<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+			<link rel="stylesheet" href="{% static 'css/style-desktop.css' %}" />
+<!--		</noscript>-->
+	</head>
+	<body class="homepage">
+		<!-- Header -->
+		<div id="header-wrapper">
+
+			<div class="container">
+				<div id="header">
+					<div id="logo">
+						<h1><a href="#">Real Estate Agent</a></h1>
+						<span>by IANSONG</span>
+					</div>
+					<nav id="nav">
+						<ul>
+							<li class="current_page_item"><a href="{% url 'main' %}">Homepage</a></li>
+							<li><a href="twocolumn1.html">Two Column #1</a></li>
+							<li><a href="{% url 'post_list' %}">Message Board #2</a></li>
+							<li><a href="main_post.html">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+		</div>
+
+        <div class="content container">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<div class="container">
+				Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
+			</div>
+		</div>
+
 </body>
 </html>

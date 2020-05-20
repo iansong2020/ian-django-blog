@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <title>아파트인포 부동산</title>
-        <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    </head>
-    <body>
-        <div class="page-header">
-            <a href="{% url 'post_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
-            <h1><a href="/">아파트인포 부동산</a></h1>
-        </div>
+{% extends 'blog/main_base.html' %}
 
-        <div class="container-fluid" style="background-color:#e8e8e8">
+{% block content %}
+    <div class="container-fluid" style="background-color:#e8e8e8">
             <div class="container container-pad" id="property-listings">
 
                 <div class="row">
@@ -286,7 +271,5 @@
                 </div><!-- End row -->
             </div><!-- End container -->
         </div>
-
-    </body>
-</html>
+{% endblock %}
 
