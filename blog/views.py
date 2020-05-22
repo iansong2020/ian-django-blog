@@ -11,6 +11,12 @@ from django.contrib.auth.decorators import login_required
 def main(request):
     return render(request, 'blog/main.html')
 
+def home_list(request):
+    return render(request, 'blog/home_list.html')
+
+def main_contact(request):
+    return render(request, 'blog/contact.html')
+
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'blog/post_list.html', {'posts': posts})

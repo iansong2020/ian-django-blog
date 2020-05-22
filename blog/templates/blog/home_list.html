@@ -1,0 +1,306 @@
+{% extends 'blog/main_base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Header -->
+    <div id="header-wrapper">
+
+        <div class="container">
+            <div id="header">
+                <div id="logo">
+                    <h1><a href="#">Real Estate Agent</a></h1>
+                    <span>by IANSONG</span>
+                </div>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="{% url 'main' %}">Homepage</a></li>
+                        <li class="current_page_item"><a href="{% url 'home_list' %}">Home Listings #1</a></li>
+                        <li><a href="{% url 'post_list' %}">Message Board #2</a></li>
+                        <li><a href="{% url 'main_contact' %}">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- wrapper -->
+    <div id="wrapper" class="container-fluid"> <!--style="background-color:#e8e8e8"-->
+        <!-- Home listings -->
+        <div class="container container-pad" id="property-listings">
+
+    <div class="row">
+    <div class="col-md-12">
+    <h1>정말 리얼한 부동산 정보 리스트</h1>
+    <p>실시간으로 공공데이터시스템과 연계하여 정보를 제공하므로 조회 시 지연이 발생할 수 있습니다.</p>
+    <p>본 서비스에서 제공되는 정보는 법적인 효력이 없으며, 참고용으로만 활용하시기 바랍니다.</p>
+    </div>
+    </div>
+
+    <div id="page" class="row">
+    <div class="col-sm-6">
+
+    <!-- Begin Listing: 609 W GRAVERS LN-->
+    <div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing">
+    <div class="media">
+        <a class="pull-left" href="#" target="_parent">
+        <img alt="image" class="img-responsive" src="{% static 'images/estate/Yangpyeong-gun/Yongmun-myeon/cat-01/object-001/1.jpg' %}"></a>
+
+        <div class="clearfix visible-sm"></div>
+
+        <div class="media-body fnt-smaller">
+            <a href="#" target="_parent"></a>
+
+            <h4 class="media-heading">
+              <a href="#" target="_parent">매매 4억 9,000<small class="pull-right">양평군 용문면</small></a></h4>
+
+
+            <ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
+                <li>대지/연 면적:660㎡/174㎡</li>
+
+                <li style="list-style: none">|</li>
+
+                <li>방 4</li>
+
+                <li style="list-style: none">|</li>
+
+                <li>욕실수 2</li>
+            </ul>
+
+            <p class="hidden-xs">용문면 다문리에 있는 전원주택으로 예술인마을에 있는 주택입니다.
+                대규모 단지안의 주택이라 실거주하기 좋습니다.
+                조망상태 남동향으로 탁트인 조망이며
+            ...</p><span class="fnt-smaller fnt-lighter fnt-arial">더화이트공인중개사사무소
+            031-771-8250</span>
+        </div>
+    </div>
+    </div><!-- End Listing-->
+
+    <!-- Begin Listing: 218 LYNNEBROOK LN-->
+    <div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing">
+    <div class="media">
+        <a class="pull-left" href="#" target="_parent">
+        <img alt="image" class="img-responsive" src="{% static 'images/estate/Yangpyeong-gun/Yongmun-myeon/cat-01/object-001/1.jpg' %}"></a>
+
+        <div class="clearfix visible-sm"></div>
+
+        <div class="media-body fnt-smaller">
+            <a href="#" target="_parent"></a>
+
+            <h4 class="media-heading">
+              <a href="#" target="_parent">매매 4억 9,000<small class="pull-right">양평군 용문면</small></a></h4>
+
+
+            <ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
+                <li>대지/연 면적:660㎡/174㎡</li>
+
+                <li style="list-style: none">|</li>
+
+                <li>방 4</li>
+
+                <li style="list-style: none">|</li>
+
+                <li>욕실수 2</li>
+            </ul>
+
+            <p class="hidden-xs">용문면 다문리에 있는 전원주택으로 예술인마을에 있는 주택입니다.
+                대규모 단지안의 주택이라 실거주하기 좋습니다.
+                조망상태 남동향으로 탁트인 조망이며
+            ...</p><span class="fnt-smaller fnt-lighter fnt-arial">더화이트공인중개사사무소
+            031-771-8250</span>
+        </div>
+    </div>
+    </div><!-- End Listing-->
+
+    <!-- Begin Listing: 209 CHESTNUT HILL AVE-->
+    <div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing">
+    <div class="media">
+        <a class="pull-left" href="#" target="_parent">
+        <img alt="image" class="img-responsive" src="{% static 'images/estate/Yangpyeong-gun/Yongmun-myeon/cat-01/object-001/1.jpg' %}"></a>
+
+        <div class="clearfix visible-sm"></div>
+
+        <div class="media-body fnt-smaller">
+            <a href="#" target="_parent"></a>
+
+            <h4 class="media-heading">
+              <a href="#" target="_parent">매매 4억 9,000<small class="pull-right">양평군 용문면</small></a></h4>
+
+
+            <ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
+                <li>대지/연 면적:660㎡/174㎡</li>
+
+                <li style="list-style: none">|</li>
+
+                <li>방 4</li>
+
+                <li style="list-style: none">|</li>
+
+                <li>욕실수 2</li>
+            </ul>
+
+            <p class="hidden-xs">용문면 다문리에 있는 전원주택으로 예술인마을에 있는 주택입니다.
+                대규모 단지안의 주택이라 실거주하기 좋습니다.
+                조망상태 남동향으로 탁트인 조망이며
+            ...</p><span class="fnt-smaller fnt-lighter fnt-arial">더화이트공인중개사사무소
+            031-771-8250</span>
+        </div>
+    </div>
+    </div><!-- End Listing-->
+
+    <!-- Begin Listing: 704 SAINT GEORGES ST-->
+    <div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing">
+    <div class="media">
+        <a class="pull-left" href="#" target="_parent">
+        <img alt="image" class="img-responsive" src="{% static 'images/estate/Yangpyeong-gun/Yongmun-myeon/cat-01/object-001/1.jpg' %}"></a>
+
+        <div class="clearfix visible-sm"></div>
+
+        <div class="media-body fnt-smaller">
+            <a href="#" target="_parent"></a>
+
+            <h4 class="media-heading">
+              <a href="#" target="_parent">매매 4억 9,000<small class="pull-right">양평군 용문면</small></a></h4>
+
+
+            <ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
+                <li>대지/연 면적:660㎡/174㎡</li>
+
+                <li style="list-style: none">|</li>
+
+                <li>방 4</li>
+
+                <li style="list-style: none">|</li>
+
+                <li>욕실수 2</li>
+            </ul>
+
+            <p class="hidden-xs">용문면 다문리에 있는 전원주택으로 예술인마을에 있는 주택입니다.
+                대규모 단지안의 주택이라 실거주하기 좋습니다.
+                조망상태 남동향으로 탁트인 조망이며
+            ...</p><span class="fnt-smaller fnt-lighter fnt-arial">더화이트공인중개사사무소
+            031-771-8250</span>
+        </div>
+    </div>
+    </div><!-- End Listing-->
+
+
+
+    </div>
+
+    <div class="col-sm-6">
+
+    <!-- Begin Listing: 1220-32 N HOWARD ST-->
+    <div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing">
+    <div class="media">
+        <a class="pull-left" href="#" target="_parent">
+        <img alt="image" class="img-responsive" src="{% static 'images/estate/Yangpyeong-gun/Yongmun-myeon/cat-01/object-001/1.jpg' %}"></a>
+
+        <div class="clearfix visible-sm"></div>
+
+        <div class="media-body fnt-smaller">
+            <a href="#" target="_parent"></a>
+
+            <h4 class="media-heading">
+              <a href="#" target="_parent">매매 4억 9,000<small class="pull-right">양평군 용문면</small></a></h4>
+
+
+            <ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
+                <li>대지/연 면적:660㎡/174㎡</li>
+
+                <li style="list-style: none">|</li>
+
+                <li>방 4</li>
+
+                <li style="list-style: none">|</li>
+
+                <li>욕실수 2</li>
+            </ul>
+
+            <p class="hidden-xs">용문면 다문리에 있는 전원주택으로 예술인마을에 있는 주택입니다.
+                대규모 단지안의 주택이라 실거주하기 좋습니다.
+                조망상태 남동향으로 탁트인 조망이며
+            ...</p><span class="fnt-smaller fnt-lighter fnt-arial">더화이트공인중개사사무소
+            031-771-8250</span>
+        </div>
+    </div>
+    </div><!-- End Listing-->
+
+    <!-- Begin Listing: 9006 CREFELD ST-->
+    <div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing">
+    <div class="media">
+        <a class="pull-left" href="#" target="_parent">
+        <img alt="image" class="img-responsive" src="{% static 'images/estate/Yangpyeong-gun/Yongmun-myeon/cat-01/object-001/1.jpg' %}"></a>
+
+        <div class="clearfix visible-sm"></div>
+
+        <div class="media-body fnt-smaller">
+            <a href="#" target="_parent"></a>
+
+            <h4 class="media-heading">
+              <a href="#" target="_parent">매매 4억 9,000<small class="pull-right">양평군 용문면</small></a></h4>
+
+
+            <ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
+                <li>대지/연 면적:660㎡/174㎡</li>
+
+                <li style="list-style: none">|</li>
+
+                <li>방 4</li>
+
+                <li style="list-style: none">|</li>
+
+                <li>욕실수 2</li>
+            </ul>
+
+            <p class="hidden-xs">용문면 다문리에 있는 전원주택으로 예술인마을에 있는 주택입니다.
+                대규모 단지안의 주택이라 실거주하기 좋습니다.
+                조망상태 남동향으로 탁트인 조망이며
+            ...</p><span class="fnt-smaller fnt-lighter fnt-arial">더화이트공인중개사사무소
+            031-771-8250</span>
+        </div>
+    </div>
+    </div><!-- End Listing-->
+
+    <!-- Begin Listing: 701 W ALLENS LN-->
+    <div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing">
+    <div class="media">
+        <a class="pull-left" href="#" target="_parent">
+        <img alt="image" class="img-responsive" src="{% static 'images/estate/Yangpyeong-gun/Yongmun-myeon/cat-01/object-001/1.jpg' %}"></a>
+
+        <div class="clearfix visible-sm"></div>
+
+        <div class="media-body fnt-smaller">
+            <a href="#" target="_parent"></a>
+
+            <h4 class="media-heading">
+              <a href="#" target="_parent">매매 4억 9,000<small class="pull-right">양평군 용문면</small></a></h4>
+
+
+            <ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
+                <li>대지/연 면적:660㎡/174㎡</li>
+
+                <li style="list-style: none">|</li>
+
+                <li>방 4</li>
+
+                <li style="list-style: none">|</li>
+
+                <li>욕실수 2</li>
+            </ul>
+
+            <p class="hidden-xs">용문면 다문리에 있는 전원주택으로 예술인마을에 있는 주택입니다.
+                대규모 단지안의 주택이라 실거주하기 좋습니다.
+                조망상태 남동향으로 탁트인 조망이며
+            ...</p><span class="fnt-smaller fnt-lighter fnt-arial">더화이트공인중개사사무소
+            031-771-8250</span>
+        </div>
+    </div>
+    </div><!-- End Listing-->
+    </div><!-- End Col -->
+    </div><!-- End row -->
+    </div><!-- End container -->
+    </div>
+
+{% endblock %}
+

@@ -2,7 +2,30 @@
 
 {% block content %}
 
-        <div class="page-header">
+    <!-- Header -->
+    <div id="header-wrapper">
+
+        <div class="container">
+            <div id="header">
+                <div id="logo">
+                    <h1><a href="#">Real Estate Agent</a></h1>
+                    <span>by IANSONG</span>
+                </div>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="{% url 'main' %}">Homepage</a></li>
+                        <li><a href="{% url 'home_list' %}">Home Listings #1</a></li>
+                        <li class="current_page_item"><a href="{% url 'post_list' %}">Message Board #2</a></li>
+                        <li><a href="{% url 'main_contact' %}">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- post top menu -->
+    <div class="page-header">
 
              {% if user.is_authenticated %}
                 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
@@ -17,9 +40,9 @@
 
         </div>
 
-        <div class="content container">
-            {% block post_base %}
-            {% endblock post_base %}
-        </div>
+    <div class="content container">
+        {% block post_base %}
+        {% endblock post_base %}
+    </div>
 
 {% endblock content %}
