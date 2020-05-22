@@ -46,6 +46,19 @@ h1, h2, h3, h4 {
     float: right;
     margin-right: 20px;
 }
+
+// Mixin itself
+.clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
 /*
 .post {
     margin-bottom: 70px;
