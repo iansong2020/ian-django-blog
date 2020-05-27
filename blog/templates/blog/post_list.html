@@ -1,16 +1,63 @@
 {% extends 'blog/post_base.html' %}
-
+{% load static %}
 {% block post_base %}
+<!--
 
     {% for post in posts %}
         <div class="post">
-            <div class="date">
-                {{ post.published_date }}
-            </div>
-            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-            <p>{{ post.text|linebreaksbr }}</p>
-            <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
+
+            <article class="entry h-entry">
+				<div class="content-width">
+
+					<div class="list-row pos-right ratio-fixed ratio-4by3 crop-center lts-narrow fouc clearfix">
+
+						<div class="list-body">
+							<div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing">
+                                <div class="date">
+                                    {{ post.published_date }}
+                                </div>
+								<a class="list-link" href="{% url 'post_detail' pk=post.pk %}">
+									<h3 class="list-head ie-nanum ci-link">{{ post.title }}</h3>
+									<p class="list-summary">{{ post.text|linebreaksbr }} ..</p>
+								</a>
+                                <a id="marketing" href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
+							</div>
+						</div>
+
+					</div>
+
+				</div>&lt;!&ndash; /.content-width &ndash;&gt;
+			</article>
+
         </div>
     {% endfor %}
+-->
+
+	<div class="col-md-10 offset-md-1 col-lg-10 offset-lg-1">
+		<div class="title-box-d">
+			<h3 class="title-d">블로그</h3>
+		</div>
+		<div class="box-comments">
+			<ul class="list-comments">
+				{% for post in posts %}
+
+					<li>
+						<div class="comment-avatar">
+							<img src="{% static 'images/blog/author-2.jpg' %}" alt="">
+						</div>
+						<div class="comment-details">
+							<h4 class="comment-author">{{ post.title }}</h4>
+							<span>{{ post.published_date }}</span>
+							<p class="comment-description">
+								{{ post.text|linebreaksbr }}
+							</p>
+							<a href="{% url 'post_detail' pk=post.pk %}">Reply : {{ post.approved_comments.count }}</a>
+						</div>
+					</li>
+
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
 
 {% endblock post_base %}
